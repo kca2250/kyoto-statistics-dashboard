@@ -1,0 +1,14 @@
+name: SET_UP
+on: pull_request
+jobs:
+  install_and_setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: install progress
+        run: npm install
+      - name: build progress
+        run: npm run build
+      - name: format progress
+        run: npm run format

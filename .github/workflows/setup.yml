@@ -9,6 +9,6 @@ jobs:
       - name: install progress
         run: npm install
       - name: build progress
-        run: npm run build
+        run: npm install && npm run build
       - name: format progress
-        run: npm run format
+        run: npm install && npm run format

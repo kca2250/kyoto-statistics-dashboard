@@ -1,5 +1,5 @@
 name: build test
-on: push
+on: pull_request
 jobs:
   install_and_build:
     runs-on: ubuntu-latest
@@ -7,4 +7,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: processing build
-        run: npm install && npm run build
+        run: npm run build
